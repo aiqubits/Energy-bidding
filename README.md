@@ -1,4 +1,4 @@
-# Substrate Node Template
+# Substrate Energy bidding (能源招标)
 
 A fresh [Substrate](https://substrate.io/) node, ready for hacking :rocket:
 
