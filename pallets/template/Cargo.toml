@@ -1,5 +1,5 @@
 [package]
-name = "pallet-template"
+name = "energy-bidding"
 version = "4.0.0-dev"
 description = "FRAME pallet template for defining custom runtime logic."
 authors = ["Substrate DevHub <https://github.com/substrate-developer-hub>"]
@@ -34,7 +34,7 @@ std = [
 	"log/std",
 	"sp-runtime/std",
 	"codec/std",
-	"frame-benchmarking?/std",
+	"frame-benchmarking/std",
 	"frame-support/std",
 	"frame-system/std",
 	"scale-info/std",

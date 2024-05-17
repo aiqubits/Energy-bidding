@@ -47,7 +47,7 @@ pub use sp_runtime::BuildStorage;
 pub use sp_runtime::{Perbill, Permill};
 
 /// Import the template pallet.
-pub use pallet_template;
+pub use energy_bidding;
 
 /// An index to a block.
 pub type BlockNumber = u32;
@@ -269,9 +269,9 @@ impl pallet_sudo::Config for Runtime {
 }
 
 /// Configure the pallet-template in pallets/template.
-impl pallet_template::Config for Runtime {
+impl energy_bidding::Config for Runtime {
 	type RuntimeEvent = RuntimeEvent;
-	// type WeightInfo = pallet_template::weights::SubstrateWeight<Runtime>;
+	// type WeightInfo = energy_bidding::weights::SubstrateWeight<Runtime>;
 	type AuctionId = u64;
 	type Quantity = u128;
 	type Price = u128;
@@ -288,7 +288,7 @@ construct_runtime!(
 		TransactionPayment: pallet_transaction_payment,
 		Sudo: pallet_sudo,
 		// Include the custom logic from the pallet-template in the runtime.
-		TemplateModule: pallet_template,
+		EnergyBiddingModule: energy_bidding,
 	}
 );
 
@@ -336,7 +336,7 @@ mod benches {
 		[pallet_balances, Balances]
 		[pallet_timestamp, Timestamp]
 		[pallet_sudo, Sudo]
-		[pallet_template, TemplateModule]
+		[energy_bidding, EnergyBiddingModule]
 	);
 }
 
